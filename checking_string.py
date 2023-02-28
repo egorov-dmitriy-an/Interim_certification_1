@@ -1,4 +1,4 @@
-def find_text(text, surname):
-    surname_sp = surname.split(';')
-    if text in surname_sp[0]:
+def find_text(text, heading):
+    head = heading.split(';')
+    if text in head[0]:
         return True
