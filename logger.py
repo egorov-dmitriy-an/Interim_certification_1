@@ -1,6 +1,6 @@
 from datetime import datetime as dt
 
-def request_note_logger(data, sensor):
+def request_note_logger(sensor):
     time = dt.now().strftime('%H:%M')
     if sensor == 2:
         with open('log_seminar.csv', 'a', encoding="utf-8") as file:
