@@ -19,9 +19,13 @@ def del_note(guide_file, number_line):
                 if (number_line == arr_line[0]):
                     del_li = line
                     break
-
-    with open('guide.txt2', 'a', encoding="utf-8") as file:
-
+    with open(guide_file, 'w', encoding="utf-8") as file:
         for line_note in del_line:
-            if (line_note != del_li):
+            if line_note != del_li:
                 file.write(line_note)
+        arr_line = del_li.split(';')
+        print("Удалена заметка: ")
+        print("Id: " + arr_line[0] + "\n" +
+              "Заголовок: " + arr_line[1] + "\n" +
+              "Тело: " + arr_line[2] + "\n" +
+              "Дата изменения: " + arr_line[3] + "\n")
