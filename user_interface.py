@@ -17,7 +17,8 @@ def button_click():
             print_note.show_1(note)
             number_info = (input('Введите id заметки: '))
             number2 = check_mod.check_actions(number_info)
-            if number == 7:
+            log.request_note_logger(number2)
+            if number2 == 7:
                 print_note.show_0()
                 break
             elif number2 == 4:
