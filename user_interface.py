@@ -26,8 +26,18 @@ def button_click():
                 print("Здесь будет редактирование")
             elif number2 == 6:
                 print_note.show_note_id(number_info)
-
         elif number == 2:
             add_note.save_note('guide.txt', note)
         elif number == 3:
             print_note.show_3()
+            number_info = (input('Введите id заметки: '))
+            number2 = check_mod.check_actions(number_info)
+            if number == 7:
+                print_note.show_0()
+                break
+            elif number2 == 4:
+                add_note.del_note('guide.txt', number_info)
+            elif number2 == 5:
+                print("Здесь будет редактирование")
+            elif number2 == 6:
+                print_note.show_note_id(number_info)
