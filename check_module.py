@@ -17,9 +17,8 @@ def check_start():
                            ': ')
     return int(sensor)
 
-def check_actions():
+def check_actions(sensor):
     while True:
-        sensor = ''
         while sensor.isdecimal() == False:
             sensor = input('Для удаления заметки нажмите        - 4\n'
                            'Для редактирования заметки нажмите  - 5\n'

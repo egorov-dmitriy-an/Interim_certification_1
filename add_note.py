@@ -7,14 +7,21 @@ def save_note(guide_file, new_note):
 
 def del_note(guide_file, number_line):
     with open(guide_file, 'r', encoding="utf-8") as file:
+        del_line = file.readlines()
+
+    with open(guide_file, 'r', encoding="utf-8") as file:
         while True:
             line = file.readline()
             if not line:
                 break
             else:
                 arr_line = line.split(';')
-                del_line = line
                 if (number_line == arr_line[0]):
+                    del_li = line
                     break
-    return del_line
 
+    with open('guide.txt2', 'a', encoding="utf-8") as file:
+
+        for line_note in del_line:
+            if (line_note != del_li):
+                file.write(line_note)

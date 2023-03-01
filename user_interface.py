@@ -17,7 +17,10 @@ def button_click():
             print_note.show_1(note)
             number_info = (input('Введите id заметки: '))
             print_note.show_note_id(number_info)
-            print(add_note.del_note('guide.txt', number_info))
+            #number2 = check_mod.check_actions(number_info)
+                #if number2 == 4:
+                    #add_note.del_note('guide.txt', number2)
+
         elif number == 2:
             add_note.save_note('guide.txt', note)
         elif number == 3:
